@@ -16,7 +16,7 @@ Leiningen/Boot
 To install, add the following to you project `:dependencies`:
 
 ```clojure
-[druids/gettext "0.1.0"]
+[druids/gettext "0.2.0"]
 ```
 
 And into `:plugins`, if you want to call leiningen tasks.
