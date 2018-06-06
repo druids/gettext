@@ -19,6 +19,9 @@ To install, add the following to you project `:dependencies`:
 [gettext "0.0.0"]
 ```
 
+And into `:plugins`, if you want to call leiningen tasks.
+
+
 Requirements
 ------------
 
