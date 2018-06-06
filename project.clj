@@ -4,12 +4,12 @@
   :license {:name "MIT License"
             :url "http://opensource.org/licenses/MIT"}
 
-  :dependencies [[com.teamunify/easy-i18n "0.9.1"]]
+  :dependencies [[com.teamunify/easy-i18n "0.9.11"]]
 
   :eval-in-leiningen true
 
   :profiles {:dev {:plugins [[lein-kibit "0.1.6"]
-                             [jonase/eastwood "0.2.5"]
+                             [jonase/eastwood "0.2.6"]
                              [venantius/ultra "0.5.2"]]
                    :dependencies [[org.clojure/clojure "1.9.0"]]
                    :source-paths ["src" "dev/src"]}
