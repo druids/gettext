@@ -1,4 +1,4 @@
-(defproject gettext "0.0.0"
+(defproject druids/gettext "0.1.0"
   :description "GNU Gettext for Clojure based on Easy I18N"
   :url "https://github.com/druids/gettext"
   :license {:name "MIT License"
