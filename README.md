@@ -25,8 +25,39 @@ Requirements
 Install a system dependency [GNU Gettext](https://www.gnu.org/software/gettext).
 
 
+Configuration
+-------------
+
+A path for message files can be specified in `project.clj` like:
+
+```clojure
+{:gettext {:target-dir "resources/myproject/i18n"}
+```
+
+When the path is not specified following path is used: "resources/PROJECT\_NAME/i18n".
+
+
 Usage
 -----
+
+Before you start a language file need to be initialized, e.g.:
+
+```sh
+lein gettext init cs ge
+```
+
+When translations are done, messages need to be merged:
+
+```sh
+lein gettext merge cs ge
+```
+
+And compiled into Java classes:
+
+```sh
+lein gettext compile cs ge
+```
+
 
 `gettext.core` namespace provides following functions:
 
@@ -48,3 +79,9 @@ Examples:
 (gettext/trf "Hello {0}" ["world"]) ;; "Hello world"
 (gettext/trf :de "Hello {0}" ["Das Welt"]) ;; "Hallo Das Welt"
 ```
+
+
+Notes
+-----
+
+Currently extracting messages from Clojure code is **NOT** supported. This job has to be done by a hand.
