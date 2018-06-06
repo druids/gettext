@@ -48,7 +48,7 @@
       (let [file-path (path-join [target-dir (format "%s.po" lang)])]
         (info (format "Merging template file into %s" lang))
         (if (-> file-path io/as-file .exists)
-          (sh "msgmerge" "-i" "-F" "--no-wrap" "-o" file-path file-path pot-file-path)
+          (sh "msgmerge" "-s" "--no-wrap" "-o" file-path file-path pot-file-path)
           (warn (format "%s does not exist! Skipping." file-path)))))))
 
 
